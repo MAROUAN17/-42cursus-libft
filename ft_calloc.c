@@ -6,11 +6,11 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:15:46 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/02 10:20:03 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:17:02 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 #include <stdlib.h>
 
 void	*ft_calloc(size_t count, size_t size)
@@ -19,19 +19,15 @@ void	*ft_calloc(size_t count, size_t size)
 	char	*p;
 
 	i = 0;
-	p = malloc(count * size);
-	while (i < count)
-	{
-		p[i] = 0;
-		i++;
-	}
+	p = (char *)malloc(count * size);
+	if (!p)
+		return (0);
+	ft_memset(p, 0, count * size);
 	return (p);
 }
 
-/*
-int main()
-{
-	ft_calloc(2, 4);
-	return 0;
-}
-*/
+// int main()
+// {
+// 	ft_calloc(8539, sizeof(int));
+// 	return 0;
+// }

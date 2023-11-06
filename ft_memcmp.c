@@ -6,7 +6,7 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 16:31:52 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/04 18:59:38 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:18:52 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	char	*str2;
 
 	i = 0;
-	if(n == 0)
+	if (n == 0)
 		return (0);
 	str1 = (char *)s1;
 	str2 = (char *)s2;

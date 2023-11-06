@@ -6,7 +6,7 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 11:05:23 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/04 17:06:23 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:20:31 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	dst_len;
 	size_t	src_len;
-	
+
 	i = 0;
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
@@ -29,7 +29,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[dst_len + i] = '\0';
-	if(dstsize < dst_len)
+	if (dstsize < dst_len)
 		return (dst_len + i);
 	else
 		return (dst_len + src_len);

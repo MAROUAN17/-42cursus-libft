@@ -6,11 +6,13 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 19:16:50 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/04 12:42:28 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/05 17:00:04 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include <stdio.h>
+// #include <string.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -39,9 +41,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-/*int main()
-{
-	char s1[] = "abcdef";
-	printf("%s\n", ft_memmove(s1, s1 + 1, 3));
-	return 0;
-}*/
+// int main()
+// {
+// 	char s1[] = "abcdef";
+// 	printf("%s\n", ft_memmove(s1, s1 + 1, 6));
+// 	return 0;
+// }

@@ -6,36 +6,49 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:45:57 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/05 13:35:36 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:09:29 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
-// #include <unistd.h>
 // #include <stdio.h>
+
+size_t	count_word(char const *s, unsigned int start, size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[start] && i < len)
+	{
+		start++;
+		i++;
+	}
+	return (i);
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	z;
 	char	*p;
 
 	i = 0;
-	z = 0;
-	p = malloc(sizeof(char) * len + 1);
-	while (s[start])
-	{
-		p[z] = s[start];
-		start++;
-		z++;
-	}
-	p[z] = '\0';
+	if (len > ft_strlen(s) && start < ft_strlen(s))
+		p = malloc((sizeof(char)) * ((ft_strlen(s) - start) + 1));
+	else if (start >= ft_strlen(s) || len == 0)
+		p = malloc(1);
+	else
+		p = malloc((sizeof(char)) * ((count_word(s, start, len)) + 1));
+	if (!p)
+		return (0);
+	while (start < ft_strlen(s) && i < (unsigned int)len)
+		p[i++] = s[start++];
+	p[i] = '\0';
 	return (p);
 }
 
 // int main()
 // {
-// 	char s1[] = "teeeeeeest";
-// 	printf("%s\n", ft_substr(s1, 1, 3));
-// 	return 0;
+//     printf("%s\n", ft_substr("hola", 0, 0));
+//     return 0;
 // }

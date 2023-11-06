@@ -6,7 +6,7 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:36:26 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/05 14:10:25 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:18:16 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*p;
 
 	i = 0;

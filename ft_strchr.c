@@ -6,7 +6,7 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:43:45 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/04 17:41:59 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:21:50 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-	unsigned char cc;
-	char	*p;
+	size_t			i;
+	unsigned char	cc;
+	char			*p;
 
 	i = 0;
 	cc = (unsigned char)c;

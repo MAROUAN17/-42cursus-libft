@@ -6,7 +6,7 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:20:20 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/03 20:53:15 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/05 16:14:19 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strdup(const char *s1)
 
 	i = 0;
 	p = malloc(sizeof(char) * strlen(s1) + 1);
+	if (!p)
+		return (0);
 	while (i < strlen(s1) + 1)
 	{
 		p[i] = s1[i];

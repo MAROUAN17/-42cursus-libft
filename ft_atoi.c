@@ -6,7 +6,7 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 16:55:29 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/05 13:23:54 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:16:41 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ int	check_m(const char *str, size_t *ptr_i)
 	i = 0;
 	m = 1;
 	while ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13)) 
-        i++;
-    if (str[i] == '+' || str[i] == '-')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-        if (str[i] == '-')
-            m = -m;
-        i++;
-    }
+		if (str[i] == '-')
+			m = -m;
+		i++;
+	}
 	*ptr_i = i;
 	return (m);
 }

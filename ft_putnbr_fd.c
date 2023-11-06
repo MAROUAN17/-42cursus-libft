@@ -6,7 +6,7 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:31:38 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/05 13:32:54 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:19:28 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	s;
-	long ln;
+	long	ln;
 
 	ln = (long)n;
 	if (n < 0)

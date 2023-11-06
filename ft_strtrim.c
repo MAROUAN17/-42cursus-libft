@@ -6,49 +6,56 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:52:13 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/03 20:55:58 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/05 17:51:30 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
+// #include <stdio.h>
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*allocation(char *p, size_t start, size_t end)
 {
-	size_t	len;
-	size_t	i;
-	char	*str;
-	char	*p;
-
-	i = 0;
-	len = ft_strlen(s1);
-	str = (char *)s1;
-	if (str == 0 || set == 0) 
-		return (0);
-	while (len > 0 && ft_strchr(set, str[0]) != 0) 
-	{
-		ft_memmove(str, str + 1, len - 1);
-		len--;
-	}
-	while (len > 0 && ft_strchr(set, str[len - 1]) != 0) 
-	{
-		str[len - 1] = '\0';
-		len--;
-	}
-	p = malloc((sizeof(char) * ft_strlen(str)));
-	while (str[i++])
-		p[i] = str[i];
+	if (start <= end)
+		p = malloc((sizeof(char) * (end - start)) + 1);
+	else
+		p = malloc(sizeof(char));
 	return (p);
 }
 
-/*int main() {
-	char s1[] = "###!!teeeest!!###";
-	char set[] = "#!";
-	
-	printf("Original: %s\n", s1);
-	ft_strtrim(s1, set);
-	printf("Trimmed: %s\n", s1);
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	i;
+	size_t	start;
+	size_t	end;
+	char	*p;
 
-	return 0;
-}*/
+	i = 0;
+	start = 0;
+	p = 0;
+	end = ft_strlen(s1);
+	while (s1[start] && ft_strchr(set, s1[start]) != 0) 
+		start++;
+	while (end > 0 && ft_strchr(set, s1[end - 1]) != 0) 
+		end--;
+	p = allocation(p, start, end);
+	if (!p || (s1 == 0 || set == 0))
+		return (0);
+	while (start < end)
+	{
+		p[i] = s1[start];
+		i++;
+		start++;
+	}
+	p[i] = '\0';
+	return (p);
+}
+
+// int main() {
+// 	char s1[] = "####!!!AABCCC!!#####";
+// 	char set[] = "#!";
+// 	printf("Original: %s\n", s1);
+// 	printf("Trimmed: %s\n", ft_strtrim(s1, set));
+
+// 	return 0;
+// }
