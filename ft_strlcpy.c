@@ -6,15 +6,15 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:57:29 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/04 13:30:06 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:07:07 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 #include "libft.h"
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, 
+size_t	ft_strlcpy(char *dst, const char *src, 
 			size_t dstsize)
 {
 	size_t	i;

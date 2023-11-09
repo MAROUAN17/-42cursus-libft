@@ -6,7 +6,7 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:36:26 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/06 12:18:16 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/08 14:58:05 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		if (p[i] == (unsigned char)c)
 		{
 			p += i;
-			while (p[i])
-				i++;
 			return (p);
 		}
 		else

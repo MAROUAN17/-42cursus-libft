@@ -6,14 +6,14 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:23:20 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/02 11:35:03 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:21:25 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <unistd.h>
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -24,13 +24,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*str2;
 	char	*p;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
 	z = 0;
 	str1 = (char *)s1;
 	str2 = (char *)s2;
 	p = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!p)
-		return (0);
+		return (NULL);
 	while (i < ft_strlen(s1))
 		p[i++] = str1[z++];
 	z = 0;
@@ -40,10 +42,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (p);
 }
 
-/*int main()
-{
-	char s1[] = "allo"; 
-	char s2[] = "test"; 
-	printf("%s\n", ft_strjoin(s1, s2));
-	return 0;
-}*/
+// int main()
+// {
+// 	printf("%s\n", ft_strjoin(NULL, NULL));
+// 	return 0;
+// }

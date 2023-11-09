@@ -6,7 +6,7 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:11:11 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/06 12:14:40 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/08 17:49:46 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		len;
 	char	*p;
 
+	if (!s || !f)
+		return (NULL);
 	len = 0;
 	while (s[len])
 		len++;

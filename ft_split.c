@@ -6,13 +6,13 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:05:45 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/06 11:27:24 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:05:08 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-// #include <stdio.h>
+//  #include <stdio.h>
 
 size_t	count_words(char const *s, char const c)
 {
@@ -35,7 +35,7 @@ size_t	count_words(char const *s, char const c)
 	return (counter);
 }
 
-size_t	word_len(char const *s, char c, size_t i)
+size_t	word_length(char const *s, char c, size_t i)
 {
 	size_t	x;
 
@@ -56,7 +56,13 @@ void	*freeing_memory(char **p, size_t z)
 		free(p[z]);
 	}
 	free(p);
-	return (0);
+	return (NULL);
+}
+
+void	equal(char const *s, char c, size_t *ptr_i)
+{
+	while (s[(*ptr_i)] && s[(*ptr_i)] == c)
+		(*ptr_i)++;
 }
 
 char	**ft_split(char const *s, char c)
@@ -66,16 +72,17 @@ char	**ft_split(char const *s, char c)
 	size_t	j;
 	char	**p;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	z = 0;
 	p = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!p)
-		return (0);
+		return (NULL);
 	while (z < count_words(s, c))
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		p[z] = (char *)malloc(word_len(s, c, i) + 1);
+		equal(s, c, &i);
+		p[z] = (char *)malloc(word_length(s, c, i) + 1);
 		if (!p[z])
 			return (freeing_memory(p, z));
 		j = 0;
@@ -88,16 +95,7 @@ char	**ft_split(char const *s, char c)
 }
 
 // int main()
-// {
-//     size_t i = 0;
-//     char str[] = "dewfewewfew,,fewf,ew,e,few,fewf,ewf";
-//     char c = ',';
-//     char **arr;
-//     arr = ft_split(str, c);
-//     while (arr[i])
-//     {
-//         printf("arr[%zu] => %s\n", i, arr[i]);
-//         i++;
-//     }
+// {   
+//     printf("%s\n", *(ft_split(NULL, ' ')));
 //     return 0;
 // }

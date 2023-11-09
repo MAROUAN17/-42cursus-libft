@@ -6,11 +6,13 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 11:05:23 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/06 12:20:31 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:16:42 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include <string.h>
+// #include <stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -19,8 +21,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 
 	i = 0;
-	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
+	if (dst == NULL && dstsize == 0)
+		return (src_len);
+	dst_len = ft_strlen(dst);
 	if (dstsize <= dst_len)
 		return (src_len + dstsize);
 	while (src[i] && i < dstsize - dst_len - 1)
@@ -35,8 +39,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (dst_len + src_len);
 }
 
-/*int main()
-{
-    printf("%zu\n", strlcat("pqrs", "abcdefghi", 10));
-	return 0;
-}*/
+//  int main()
+//  {
+// 	char dest[20] = "what";
+// 	char *src = "d";
+// 	printf("%zu\n", ft_strlcat(NULL, "test", 1));
+//  	return 0;
+//  }

@@ -6,27 +6,30 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:29:25 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/03 18:30:15 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/08 20:23:25 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
 	size_t	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{
-		write(fd, &s[i], 1);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	write(fd, "\n", 1);
+	ft_putchar_fd('\n', fd);
 }
 
-/*int main()
-{
-	ft_putstr_fd("test", 1);
-	return 0;
-}*/
+// int main()
+// {
+// 	ft_putstr_fd("test", 1);
+// 	return 0;
+// }

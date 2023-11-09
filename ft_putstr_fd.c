@@ -6,27 +6,29 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:26:50 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/03 18:27:35 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/08 20:23:35 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
+// #include <stdio.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{
-		write(fd, &s[i], 1);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 }
 
-/*int main()
-{
-	ft_putstr_fd("test", 1);
-	return 0;
-}*/
+// int main()
+// {
+// 	ft_putstr_fd("test", 1);
+// 	return 0;
+// }

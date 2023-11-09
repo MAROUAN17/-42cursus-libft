@@ -6,21 +6,19 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:44:18 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/07 14:55:47 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:23:17 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
-
 int		ft_isprint(int c);
 int		ft_isdigit(int c);
 int		ft_isascii(int c);
-int		ft_isalpha(char c);
+int		ft_isalpha(int c);
 int		ft_isalnum(int c);
-void	*ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_itoa(int n);

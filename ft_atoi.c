@@ -6,7 +6,7 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 16:55:29 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/06 12:16:41 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/08 10:38:46 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	ft_atoi(const char *str)
 
 // int main()
 // {
-// 	printf("%d\n", ft_atoi("\003 4"));
-// 	printf("%d\n", atoi("\003 4"));
+// 	printf("%d\n", ft_atoi("b124"));
+// 	printf("%d\n", atoi("b124"));
 // 	return 0;
 // }

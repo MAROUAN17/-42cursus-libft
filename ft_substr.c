@@ -6,7 +6,7 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:45:57 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/06 12:09:29 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:20:02 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	char	*p;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	if (len > ft_strlen(s) && start < ft_strlen(s))
 		p = malloc((sizeof(char)) * ((ft_strlen(s) - start) + 1));
@@ -49,6 +51,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int main()
 // {
-//     printf("%s\n", ft_substr("hola", 0, 0));
+//     printf("%s\n", ft_substr(NULL, NULL, 0));
 //     return 0;
 // }
