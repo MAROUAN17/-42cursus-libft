@@ -6,15 +6,14 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 14:52:13 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/09 10:22:50 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/10 17:44:43 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-// #include <stdio.h>
 
-char	*allocation(char *p, size_t start, size_t end)
+static char	*allocation(char *p, size_t start, size_t end)
 {
 	if (start <= end)
 		p = malloc((sizeof(char) * (end - start)) + 1);
@@ -48,12 +47,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	p[i] = '\0';
 	return (p);
 }
-
-// int main() {
-// 	char s1[] = "####!!!AABCCC!!#####";
-// 	char set[] = "#!";
-// 	printf("Original: %s\n", s1);
-// 	printf("Trimmed: %s\n", ft_strtrim(NULL, "ewfew"));
-
-// 	return 0;
-// }

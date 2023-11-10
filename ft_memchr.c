@@ -6,13 +6,11 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:36:26 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/08 14:58:05 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/10 17:47:12 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-// #include <string.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -33,11 +31,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-// int main()
-// {
-// 	int s[] = {300,2,3,4,5};
-// 	printf("%s\n", ft_memchr(s, 300, 10));
-// 	printf("%s\n", memchr(s, 300, 10));
-// 	return 0;
-// }

@@ -6,7 +6,7 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:31:38 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/08 17:04:30 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/10 13:51:34 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(s, fd);
 	}
 }
-
-// int main()
-// {
-// 	ft_putnbr_fd(2147483647, 1);
-// 	return 0;
-// }

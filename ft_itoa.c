@@ -6,15 +6,14 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:36:37 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/06 12:17:49 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/10 17:45:43 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-// #include <stdio.h>
 
-char	word_len(int n)
+static char	word_len(int n)
 {
 	size_t	i;
 
@@ -29,7 +28,7 @@ char	word_len(int n)
 	return (i);
 }
 
-void	ft_putnbr(char *p, int n, int *i)
+static void	ft_putnbr(char *p, int n, int *i)
 {
 	long	ln;
 
@@ -43,7 +42,7 @@ void	ft_putnbr(char *p, int n, int *i)
 	if (ln >= 10)
 		ft_putnbr(p, ln / 10, i);
 	p[(*i)] = (ln % 10) + '0';
-	(*i)++; 
+	(*i)++;
 }
 
 char	*ft_itoa(int n)
@@ -63,9 +62,3 @@ char	*ft_itoa(int n)
 	p[length] = '\0';
 	return (p);
 }
-
-// int main()
-// {   
-// 	printf("%s\n" , ft_itoa(0));
-// 	return 0;
-// }

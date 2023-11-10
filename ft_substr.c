@@ -6,15 +6,14 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:45:57 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/09 10:20:02 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/10 17:44:51 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-// #include <stdio.h>
 
-size_t	count_word(char const *s, unsigned int start, size_t len)
+static size_t	count_word(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 
@@ -48,9 +47,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	p[i] = '\0';
 	return (p);
 }
-
-// int main()
-// {
-//     printf("%s\n", ft_substr(NULL, NULL, 0));
-//     return 0;
-// }

@@ -6,14 +6,11 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:20:20 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/09 10:16:06 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/10 13:53:01 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
-// #include <stdio.h>
-// #include <string.h>
 
 char	*ft_strdup(const char *s1)
 {
@@ -31,10 +28,3 @@ char	*ft_strdup(const char *s1)
 	}
 	return (p);
 }
-
-// int main()
-// {
-// 	char *s1 = NULL;
-// 	printf("%s\n", strdup(s1));
-// 	return 0;
-// }

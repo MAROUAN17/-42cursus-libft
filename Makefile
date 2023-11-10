@@ -4,11 +4,11 @@ SRCS_BO = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlas
 OBJBO_FILES = ${SRCS_BO:.c=.o}
 NAME = libft.a
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 %.o: %.c libft.h 
-	$(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c $< -o $@
 
 all : ${NAME}
 
@@ -21,7 +21,9 @@ clean :
 fclean : clean
 		rm -rf ${NAME}
 
-bonus:  ${OBJ_FILES} ${OBJBO_FILES}
-	ar rc ${NAME} ${OBJ_FILES} ${OBJBO_FILES}
+bonus: ${OBJBO_FILES}
+	ar rc ${NAME} ${OBJBO_FILES}
 
 re : fclean all
+
+.PHONY: re fclean clean all bonus

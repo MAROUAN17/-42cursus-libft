@@ -6,12 +6,15 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 12:44:18 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/09 10:23:17 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:00:39 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# include <stdlib.h>
+# include <unistd.h>
 
 int		ft_isprint(int c);
 int		ft_isdigit(int c);

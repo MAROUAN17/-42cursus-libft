@@ -6,12 +6,11 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:26:50 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/08 20:23:35 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/10 13:51:41 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -26,9 +25,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-
-// int main()
-// {
-// 	ft_putstr_fd("test", 1);
-// 	return 0;
-// }

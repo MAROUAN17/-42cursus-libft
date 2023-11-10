@@ -6,19 +6,16 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 16:55:29 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/08 10:38:46 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:18:54 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <unistd.h>
-// #include <stdio.h>
-// #include <stdlib.h>
 
-int	check_m(const char *str, size_t *ptr_i)
+static int	check_m(const char *str, int *ptr_i)
 {
-	size_t	i;
-	size_t	m;
+	int	i;
+	int	m;
 
 	i = 0;
 	m = 1;
@@ -36,23 +33,22 @@ int	check_m(const char *str, size_t *ptr_i)
 
 int	ft_atoi(const char *str)
 {
-	size_t	i;
-	size_t	m;
-	int		res;
+	int		i;
+	int		m;
+	long	res;
 
 	res = 0;
 	m = check_m(str, &i);
 	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
 	{
+		if (m == 1 && (res > 922337203685477580 
+				|| (res >= 922337203685477580 && str[i] > '7')))
+			return (-1);
+		if (m == -1 && (res < -922337203685477580 
+				|| (res <= -922337203685477580 && str[i] > '8')))
+			return (0);
 		res = res * 10 + (str[i] - '0');
 		i++;
 	}
-	return (res * m);
+	return ((int)(res * m));
 }
-
-// int main()
-// {
-// 	printf("%d\n", ft_atoi("b124"));
-// 	printf("%d\n", atoi("b124"));
-// 	return 0;
-// }

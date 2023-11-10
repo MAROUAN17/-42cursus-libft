@@ -6,15 +6,14 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:05:45 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/09 10:05:08 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/10 17:43:48 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-//  #include <stdio.h>
 
-size_t	count_words(char const *s, char const c)
+static size_t	count_words(char const *s, char const c)
 {
 	size_t	i;
 	size_t	counter;
@@ -35,7 +34,7 @@ size_t	count_words(char const *s, char const c)
 	return (counter);
 }
 
-size_t	word_length(char const *s, char c, size_t i)
+static size_t	word_length(char const *s, char c, size_t i)
 {
 	size_t	x;
 
@@ -48,7 +47,7 @@ size_t	word_length(char const *s, char c, size_t i)
 	return (x);
 }
 
-void	*freeing_memory(char **p, size_t z)
+static void	*freeing_memory(char **p, size_t z)
 {
 	while (z > 0)
 	{
@@ -59,7 +58,7 @@ void	*freeing_memory(char **p, size_t z)
 	return (NULL);
 }
 
-void	equal(char const *s, char c, size_t *ptr_i)
+static void	equal(char const *s, char c, size_t *ptr_i)
 {
 	while (s[(*ptr_i)] && s[(*ptr_i)] == c)
 		(*ptr_i)++;
@@ -93,9 +92,3 @@ char	**ft_split(char const *s, char c)
 	p[z] = 0;
 	return (p);
 }
-
-// int main()
-// {   
-//     printf("%s\n", *(ft_split(NULL, ' ')));
-//     return 0;
-// }

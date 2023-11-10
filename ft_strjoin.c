@@ -6,14 +6,11 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:23:20 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/09 10:21:25 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/10 13:53:39 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <unistd.h>
 #include <stdlib.h>
-// #include <stdio.h>
-// #include <string.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -41,9 +38,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	p[i] = '\0';
 	return (p);
 }
-
-// int main()
-// {
-// 	printf("%s\n", ft_strjoin(NULL, NULL));
-// 	return 0;
-// }

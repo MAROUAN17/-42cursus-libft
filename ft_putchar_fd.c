@@ -6,13 +6,12 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:19:52 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/08 20:23:16 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/10 13:51:15 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
 #include "libft.h"
-// #include <fcntl.h>
+#include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
 {
@@ -20,11 +19,3 @@ void	ft_putchar_fd(char c, int fd)
 		return ;
 	write(fd, &c, 1);
 }
-
-// int main()
-// {
-// 	int fd = open("test", O_CREAT | O_RDWR);
-// 	ft_putchar_fd('c', fd);
-// 	printf("%d", fd);
-// 	return 0;
-// }

@@ -6,11 +6,11 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:43:45 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/08 16:33:47 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/10 13:52:34 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

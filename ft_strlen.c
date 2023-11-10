@@ -6,7 +6,7 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:45:05 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/08 12:40:56 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/10 14:29:06 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,3 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-// int main()
-// {
-// 	printf("%zu\n", ft_strlen(NULL));
-// }
