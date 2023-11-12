@@ -6,7 +6,7 @@
 /*   By: maglagal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:32:57 by maglagal          #+#    #+#             */
-/*   Updated: 2023/11/08 09:30:41 by maglagal         ###   ########.fr       */
+/*   Updated: 2023/11/11 10:09:26 by maglagal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
-/*int main()
-{
-	printf("%d\n", ft_isprint(127));
-	printf("%d\n", isprint(127));
-	return 0;
-}*/

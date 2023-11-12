@@ -7,7 +7,7 @@ NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-%.o: %.c libft.h 
+%.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all : ${NAME}
