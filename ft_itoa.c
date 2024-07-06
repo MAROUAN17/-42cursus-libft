@@ -47,12 +47,10 @@ static void	ft_putnbr(char *p, int n, int *i)
 
 char	*ft_itoa(int n)
 {
-	size_t	z;
 	size_t	length;
 	int		i;
 	char	*p;
 
-	z = 0;
 	i = 0;
 	length = word_len(n);
 	p = malloc((sizeof(char) * length) + 1);
